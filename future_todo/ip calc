@@ -1,0 +1,6 @@
+FOR IP MASK CALC:
+use bin()
+Use string slicing like https://www.pythoncentral.io/cutting-and-slicing-strings-in-python/ :
+zfill()
+format()
+https://stackoverflow.com/questions/1395356/how-can-i-make-bin30-return-00011110-instead-of-0b11110
