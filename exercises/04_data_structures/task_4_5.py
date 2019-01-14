@@ -13,3 +13,11 @@
 '''
 
 VLANS = [10, 20, 30, 1, 2, 100, 10, 30, 3, 4, 10]
+VLANS.sort()
+print(VLANS)
+set_vlans = set(VLANS)
+str_vlans = list(set_vlans)
+str_vlans.sort()
+print(set_vlans)
+print(str_vlans)
+
