@@ -15,15 +15,31 @@ Outbound Interface:    FastEthernet0/0
 '''
 
 ospf_route = 'O        10.0.24.0/24 [110/41] via 10.0.13.3, 3d18h, FastEthernet0/0'
-print(ospf_route_stripped)
+
 route_string_split = ospf_route.split()
-print(type(ospf_route))
-print(type(route_string_split))
-print(route_string_split)
-
-#proto_dict = {
-	
+route_string_split.pop(route_string_split.index('via'))
 
 
+route_dict = {
+		'Protocol': {
+		'O':'OSPF',
+		'S':'STATIC'
+		}	
+}
+
+route_dict['Prefix'] = route_string_split[1]
+route_dict['AD/Metric'] = route_string_split[2].strip('[]')
+route_dict['Next-Hop'] = route_string_split[3].strip(',')	
+route_dict['Last update'] = route_string_split[4]
+route_dict['Outbound Interface'] = route_string_split[5]
+
+print(route_dict['Protocol'][route_string_split[0]])
+
+
+'''proto_dict = {
+		'O':'OSPF',
+		'S':'STATIC'
+}
+print(proto_dict['O'])'''
 
 
