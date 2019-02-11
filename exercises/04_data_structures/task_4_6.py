@@ -27,14 +27,21 @@ route_dict = {
 		}	
 }
 
+print("{:20} {}".format('Protocol:' , route_dict['Protocol'][route_string_split[0]]))
+print("{:20} {}".format('Prefix:' , route_string_split[1]))
+print("{:20} {}".format('AD/Metric:' ,  route_string_split[2].strip('[]')))
+print("{:20} {}".format('Next-Hop:' , route_string_split[3].strip(',')))
+print("{:20} {}".format('Last update:' , route_string_split[4].strip(',')))
+print("{:20} {}".format('Outbound Interface:' , route_string_split[5]))
+
+#HOW
+'''
 route_dict['Prefix'] = route_string_split[1]
 route_dict['AD/Metric'] = route_string_split[2].strip('[]')
 route_dict['Next-Hop'] = route_string_split[3].strip(',')	
 route_dict['Last update'] = route_string_split[4]
 route_dict['Outbound Interface'] = route_string_split[5]
-
-print(route_dict['Protocol'][route_string_split[0]])
-
+'''
 
 '''proto_dict = {
 		'O':'OSPF',
