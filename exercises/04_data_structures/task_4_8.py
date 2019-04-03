@@ -19,3 +19,12 @@
 '''
 
 IP = '192.168.3.1'
+
+num = IP.split('.')
+print(num)
+print(type(num))
+#num = str(num)
+print(type(num))
+print(num)
+#print("{:10} {:10} {:10} {:10}".format(int(num,10)))
+print("{:10} {:10}".format(num[0],num[1]))
