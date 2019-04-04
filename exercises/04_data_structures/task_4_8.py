@@ -19,12 +19,19 @@
 '''
 
 IP = '192.168.3.1'
-
 num = IP.split('.')
-print(num)
-print(type(num))
-#num = str(num)
-print(type(num))
-print(num)
-#print("{:10} {:10} {:10} {:10}".format(int(num,10)))
-print("{:10} {:10}".format(num[0],num[1]))
+#Here we make columns with 10 symbol width 
+ip_out = '''
+{0:<10}{1:<10}{2:<10}{3:<10}
+{4:<10}{5:<10}{6:<10}{7:<10}
+'''l
+#Here we make 'decimal' from 'string' and make 8 digit binary for the second row(it will be 8 binary digits in 10 symbols width column) 
+print(ip_out.format(int(num[0],10), int(num[1],10), int(num[2],10), int(num[3],10), '{:08b}'.format(int(num[0],10)), '{:08b}'.format(int(num[1],10)), '{:08b}'.format(int(num[2],10)), '{:08b}'.format(int(num[3],10)),))
+
+
+
+
+
+
+
+
